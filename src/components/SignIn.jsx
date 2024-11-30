@@ -17,7 +17,7 @@ const SignIn = () => {
             const lastSignInTime = result?.user?.metadata?.lastSignInTime
             const loginInfo = {email, lastSignInTime}
             
-            fetch(`http://localhost:5000/users`, {
+            fetch(`https://coffee-store-server-liart-pi.vercel.app/users`, {
                 method:'PATCH',
                 headers: {
                     'content-type':'application/json'
@@ -77,7 +77,7 @@ const SignIn = () => {
             <div className="form-control mt-6">
               <button className="btn btn-primary">Sign In</button>
             </div>
-            <p>New to coffee drinker: <Link to='/signup'> Sign Up</Link></p>
+            <p>New to coffee drinker: <Link to='/signup'> Sign Up or register</Link></p>
           </form>
         </div>
       </div>

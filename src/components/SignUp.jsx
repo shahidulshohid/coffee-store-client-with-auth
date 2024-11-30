@@ -15,7 +15,7 @@ const SignUp = () => {
             console.log('User created at fb', result.user)
             const createAt = result?.user?.metadata?.creationTime
             const newUser = {name, email, createAt}
-            fetch('http://localhost:5000/users', {
+            fetch('https://coffee-store-server-liart-pi.vercel.app/users', {
                 method:'POST',
                 headers:{
                     'content-type':'application/json'
